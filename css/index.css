@@ -1011,7 +1011,27 @@ font-size:12px;
   clip-path: polygon(100% 0, 0 50%, 100% 100%);
   opacity: 0.6;
 }
+@media (max-width:768px){
 
+.arrow-banner {
+  height: 140px;
+}
+
+.arrow-content h2 {
+  font-size: 20px;
+}
+
+.arrow-content p {
+  font-size: 12px;
+}
+
+/* Reduce arrows */
+.arrow-banner::before,
+.arrow-banner::after {
+  width: 100px;
+}
+
+}
 
 
 
