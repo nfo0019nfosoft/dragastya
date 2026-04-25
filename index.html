@@ -79,78 +79,21 @@ const navLinks = document.querySelector(".nav-links");
 const navbar = document.getElementById("navbar");
 
 /* MOBILE MENU */
-
 menuToggle.addEventListener("click", () => {
-navLinks.classList.toggle("active");
+  navLinks.classList.toggle("active");
 });
 
-/* MOBILE DROPDOWN */
-const dropdown = document.querySelector(".dropdown > a");
-const dropdownMenu = document.querySelector(".dropdown-menu");
-
-dropdown.addEventListener("click", function(e){
-
-if(window.innerWidth <= 768){
-
-// first click → dropdown open
-if(!dropdownMenu.classList.contains("show")){
-e.preventDefault();
-dropdownMenu.classList.add("show");
-}
-
-// second click → open product page
-
-}
-
-});
-
-/* NAVBAR SCROLL EFFECT */
-
-
-
-
+/* NAVBAR SHADOW ON SCROLL */
 window.addEventListener("scroll", () => {
-
-if(window.scrollY > 80){
-navbar.classList.add("navbar-scrolled");
-}else{
-navbar.classList.remove("navbar-scrolled");
-}
-
-});
-
-
-
-
-
-
-
-
-
-window.addEventListener("scroll", () => {
-  const navbar = document.getElementById("navbar");
-  const topbar = document.querySelector(".top-bar");
-
-  if(window.scrollY > 50){
-
-    // TOP BAR HIDE
-    topbar.style.transform = "translateY(-100%)";
-
-    // NAVBAR MOVE UP (NO GAP)
-    navbar.style.top = "0";
-
+  if(window.scrollY > 80){
+    navbar.classList.add("navbar-scrolled");
   } else {
-
-    // SHOW TOP BAR
-    topbar.style.transform = "translateY(0)";
-
-    // NAVBAR BELOW TOP BAR
-    navbar.style.top = "40px";
+    navbar.classList.remove("navbar-scrolled");
   }
 });
 
-
 </script>
+
 
 
 
@@ -410,19 +353,21 @@ setInterval(slideHero, 4000);
 </section>
 
 
+<section class="arrow-banner">
+
+<div class="arrow-content">
+<h2>General & Laparoscopic Surgery</h2>
+<p>Precision surgical care with advanced minimally invasive techniques.</p>
+</div>
+
+</section>
 
 
 <section class="services-modern-section" id="services">
   <div class="container">
     
     <div class="main-header-center" data-aos="fade-down">
-      <span class="sub-tag">Expert Surgical Services</span>
-      <h2 class="title">General & <span>Laparoscopic</span> Surgery</h2>
-      <div class="header-variation">
-        <span class="bar red"></span>
-        <span class="bar blue"></span>
-        <span class="bar red"></span>
-      </div>
+   
     </div>
 
     <div class="services-cards-grid">

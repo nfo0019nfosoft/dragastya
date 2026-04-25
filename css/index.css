@@ -559,7 +559,7 @@ font-size:12px;
 
 .about-premium-content h2 {
   font-size: 44px;
-  color: var(--text-dark);
+  color: #f99d26;
   margin-bottom: 20px;
   line-height: 1.2;
 }
@@ -916,10 +916,101 @@ font-size:12px;
 
 
 
+:root {
+  --vm-red: #e61d24;
+  --dark: #f99d26;
+}
 
+/* SECTION */
+.arrow-banner {
+  position: relative;
+  height: 180px;
+  background:#f99d26;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
 
+/* TEXT */
+.arrow-content {
+  color: white;
+  text-align: center;
+  z-index: 2;
+}
 
+.arrow-content h2 {
+  font-size: 28px;
+  font-weight: 800;
+  margin-bottom: 5px;
+}
 
+.arrow-content p {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+/* ================= LEFT ARROWS ================= */
+
+/* MAIN LEFT */
+.arrow-banner::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 180px;
+  height: 100%;
+
+  background: linear-gradient(135deg, #ff2a2a, #b30000);
+
+  clip-path: polygon(0 0, 100% 50%, 0 100%);
+}
+
+/* SECOND LEFT LAYER */
+.arrow-banner .arrow-content::before {
+  content: "";
+  position: absolute;
+  left: 60px;
+  top: 0;
+  width: 140px;
+  height: 100%;
+
+  background: linear-gradient(135deg, #e61d24, transparent);
+
+  clip-path: polygon(0 0, 100% 50%, 0 100%);
+  opacity: 0.6;
+}
+
+/* ================= RIGHT ARROWS ================= */
+
+/* MAIN RIGHT */
+.arrow-banner::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 180px;
+  height: 100%;
+
+  background: linear-gradient(135deg, #ff2a2a, #b30000);
+
+  clip-path: polygon(100% 0, 0 50%, 100% 100%);
+}
+
+/* SECOND RIGHT */
+.arrow-banner .arrow-content::after {
+  content: "";
+  position: absolute;
+  right: 60px;
+  top: 0;
+  width: 140px;
+  height: 100%;
+
+  background: linear-gradient(135deg, #e61d24, transparent);
+
+  clip-path: polygon(100% 0, 0 50%, 100% 100%);
+  opacity: 0.6;
+}
 
 
 
