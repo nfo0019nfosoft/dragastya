@@ -1,0 +1,1346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Dr.AGASTYA</title>
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<link rel="icon" type="image/png" href="images/fav.png">
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<link rel="stylesheet" href="css/index.css">
+
+</head>
+
+<body>
+<!-- TOP BAR -->
+<div class="top-bar">
+  <div class="top-container">
+
+    <div class="top-left">
+      <span><i class="fa-solid fa-phone"></i> +91 99558 99883</span>
+      <span><i class = "fa-solid fa-map-marker-alt"></i>Hanamkonda - Telangana</span>
+      <span><i class="fa-solid fa-envelope"></i> info@dragastya.com</span>
+    </div>
+
+    <div class="top-right">
+      <a href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+      <a href="" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+           <a href="" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+    </div>
+
+  </div>
+</div>
+
+<header id="navbar">
+
+<div class="nav-container">
+
+<!-- LOGO -->
+
+<div class="logo">
+<a href="index.html">
+<img src="images/logo.png" alt="Company Logo">
+</a>
+</div>
+
+
+<!-- NAV LINKS -->
+<ul class="nav-links">
+
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#contact">Contact</a></li>
+
+</ul>
+<a href="#contact" class="nav-cta">BOOK APPOINTMENT</a>
+
+<!-- MOBILE MENU -->
+
+<div class="menu-toggle">
+☰
+</div>
+
+
+</div>
+
+</header>
+
+<script>
+
+const menuToggle = document.querySelector(".menu-toggle");
+const navLinks = document.querySelector(".nav-links");
+const navbar = document.getElementById("navbar");
+
+/* MOBILE MENU */
+
+menuToggle.addEventListener("click", () => {
+navLinks.classList.toggle("active");
+});
+
+/* MOBILE DROPDOWN */
+const dropdown = document.querySelector(".dropdown > a");
+const dropdownMenu = document.querySelector(".dropdown-menu");
+
+dropdown.addEventListener("click", function(e){
+
+if(window.innerWidth <= 768){
+
+// first click → dropdown open
+if(!dropdownMenu.classList.contains("show")){
+e.preventDefault();
+dropdownMenu.classList.add("show");
+}
+
+// second click → open product page
+
+}
+
+});
+
+/* NAVBAR SCROLL EFFECT */
+
+
+
+
+window.addEventListener("scroll", () => {
+
+if(window.scrollY > 80){
+navbar.classList.add("navbar-scrolled");
+}else{
+navbar.classList.remove("navbar-scrolled");
+}
+
+});
+
+
+
+
+
+
+
+
+
+window.addEventListener("scroll", () => {
+  const navbar = document.getElementById("navbar");
+  const topbar = document.querySelector(".top-bar");
+
+  if(window.scrollY > 50){
+
+    // TOP BAR HIDE
+    topbar.style.transform = "translateY(-100%)";
+
+    // NAVBAR MOVE UP (NO GAP)
+    navbar.style.top = "0";
+
+  } else {
+
+    // SHOW TOP BAR
+    topbar.style.transform = "translateY(0)";
+
+    // NAVBAR BELOW TOP BAR
+    navbar.style.top = "40px";
+  }
+});
+
+
+</script>
+
+
+
+<script>
+AOS.init({
+  duration: 1000,
+  once: true,
+  easing: "ease-in-out",
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+<section class="hero" id="home">
+
+<div class="hero-slider">
+<div class="hero-track">
+
+<!-- 1 -->
+<div class="hero-slide">
+<img src="images/hero1.png">
+<div class="hero-content">
+<h1>General Surgery <br>Expert Care</h1>
+<p>Safe • Advanced • Trusted Treatment</p>
+<a href="#contact" class="hero-btn">Get Consultation</a>
+</div>
+</div>
+
+<!-- 2 -->
+<div class="hero-slide">
+<img src="images/hero2.png">
+<div class="hero-content">
+<h1>Laparoscopic <br>Surgery</h1>
+<p>Minimal Pain • Faster Recovery</p>
+<a href="#contact" class="hero-btn">Get Consultation</a>
+</div>
+</div>
+
+<!-- 3 -->
+<div class="hero-slide">
+<img src="images/hero3.png">
+<div class="hero-content">
+<h1>Advanced Surgical <br>Care</h1>
+<p>Precision • Modern Equipment</p>
+<a href="#contact" class="hero-btn">Get Consultation</a>
+</div>
+</div>
+
+<!-- 4 -->
+<div class="hero-slide">
+<img src="images/hero4.png">
+<div class="hero-content">
+<h1>24/7 Surgical <br>Support</h1>
+<p>Emergency • Expert Team</p>
+<a href="#contact" class="hero-btn">Get Consultation</a>
+</div>
+</div>
+
+<!-- CLONE -->
+<div class="hero-slide">
+<img src="images/hero1.png">
+</div>
+
+</div>
+</div>
+
+</section>
+
+
+<script>
+const track = document.querySelector(".hero-track");
+const slides = document.querySelectorAll(".hero-slide");
+
+let index = 0;
+
+function slideHero() {
+
+  index++;
+
+  track.style.transition = "transform 0.7s ease";
+  track.style.transform = `translateX(-${index * 100}%)`;
+
+  slides.forEach(s => s.classList.remove("active"));
+
+  if(index === slides.length - 1){
+
+    slides[0].classList.add("active");
+
+    setTimeout(() => {
+      track.style.transition = "none";
+      track.style.transform = "translateX(0)";
+      index = 0;
+    }, 700);
+
+  } else {
+    slides[index].classList.add("active");
+  }
+}
+
+slides[0].classList.add("active");
+
+setInterval(slideHero, 4000);
+</script>
+
+
+
+
+
+
+
+
+
+<section class="premium-about-section" id="about">
+  <div class="p-about-container">
+    
+    <div class="about-visuals-grid" data-aos="fade-right">
+      
+      <div class="primary-photo-box" data-aos="zoom-in" data-aos-delay="200">
+        <img src="images/hospital.png" alt="Dr Agastya in operation theatre" class="primary-photo">
+        <div class="experience-bubble" data-aos="fade-up" data-aos-delay="600">
+          <strong>15+</strong>
+          <span>Years of Excellence</span>
+        </div>
+      </div>
+      
+      <div class="secondary-photo-box" data-aos="fade-left" data-aos-delay="400">
+        <img src="images/hospital1.png" alt="Dr Agastya consulting patient" class="secondary-photo">
+        <div class="accent-border"></div>
+      </div>
+      
+      <div class="creative-bg-shape"></div>
+
+    </div>
+
+    <div class="about-premium-content" data-aos="fade-left">
+      
+      <h6 class="section-top-title" data-aos="fade-up">Trusted Medical Professional</h6>
+      <h2 data-aos="fade-up" data-aos-delay="100">
+        About <span>Dr. Agastya</span>
+      </h2>
+      
+      <h4 class="doctor-specialization" data-aos="fade-up" data-aos-delay="200">
+        Advanced Laparoscopic, Laser & General Surgeon
+      </h4>
+      
+      <p class="doctor-bio" data-aos="fade-up" data-aos-delay="300">
+        Dr. Agastya is a highly acclaimed specialist dedicated to providing advanced minimally invasive surgical care. Our practice is built on a foundation of precision, safety, and a deep-rooted commitment to patient well-being, ensuring you achieve optimal health and a swift recovery.
+      </p>
+      
+      <ul class="specialized-points" data-aos="fade-up" data-aos-delay="400">
+        <li>
+          <span class="p-icon">✓</span>
+          <div class="p-text">
+            <h5>Precision Laparoscopy</h5>
+            <p>Minimally invasive, faster recovery, less pain.</p>
+          </div>
+        </li>
+        <li>
+          <span class="p-icon">✓</span>
+          <div class="p-text">
+            <h5>Laser Expertise</h5>
+            <p>Advanced treatment for specific conditions.</p>
+          </div>
+        </li>
+        <li>
+          <span class="p-icon">✓</span>
+          <div class="p-text">
+            <h5>Patient-Centric Care</h5>
+            <p>Compassionate approach tailored to your needs.</p>
+          </div>
+        </li>
+        <li>
+          <span class="p-icon">✓</span>
+          <div class="p-text">
+            <h5>Modern Technology</h5>
+            <p>Utilizing state-of-the-art medical equipment.</p>
+          </div>
+        </li>
+      </ul>
+      
+      <div class="action-buttons" data-aos="fade-up" data-aos-delay="500">
+        <a href="#appointment" class="btn-primary-about">Book Consultation</a>
+        <a href="tel:+910000000000" class="btn-secondary-about">Call Clinic</a>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+<section class="card-about-section" id="about">
+  <div class="doc-container">
+
+    <div class="section-heading-wrapper" data-aos="fade-down">
+      <h6 class="top-subtitle">Expert Medical Care</h6>
+      <h2 class="main-section-title">Precision Surgery, <span>Faster Recovery</span></h2>
+      
+    </div>
+    
+    <div class="doctor-profile-card" data-aos="fade-up" data-aos-duration="1000">
+      
+      <div class="card-image-wrapper">
+        <img src="images/doctor.png" alt="Dr. Agasthya Dharmapuri" class="card-img">
+        <div class="card-badge">
+          <span>5+ Years Experience</span>
+        </div>
+      </div>
+
+      <div class="card-content">
+        <h6 class="card-tag">General Surgeon</h6>
+        <h2 class="card-title">Dr. Agasthya <span>Dharmapuri</span></h2>
+        
+        <div class="card-meta">
+          <div class="meta-item"><i class="fas fa-graduation-cap"></i> MS, FMAS</div>
+          <div class="meta-item"><i class="fas fa-map-marker-alt"></i> Hanamkonda</div>
+        </div>
+
+        <p class="card-text">
+          Dr. Agasthya Dharmapuri specializes in diagnosing and treating a wide range of General Surgery conditions. He is dedicated to providing modern treatments with precision and care.
+        </p>
+
+        <div class="spec-grid">
+          <div class="spec-item" data-aos="zoom-in" data-aos-delay="300">
+            <i class="fas fa-check-circle"></i> General Surgery
+          </div>
+          <div class="spec-item" data-aos="zoom-in" data-aos-delay="400">
+            <i class="fas fa-check-circle"></i> Advanced Diagnostics
+          </div>
+          <div class="spec-item" data-aos="zoom-in" data-aos-delay="500">
+            <i class="fas fa-language"></i> Telugu, Hindi, English
+          </div>
+        </div>
+
+        <div class="card-footer">
+          <a href="#contact" class="btn-book">Book Appointment</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+<section class="services-modern-section" id="services">
+  <div class="container">
+    
+    <div class="main-header-center" data-aos="fade-down">
+      <span class="sub-tag">Expert Surgical Services</span>
+      <h2 class="title">General & <span>Laparoscopic</span> Surgery</h2>
+      <div class="header-variation">
+        <span class="bar red"></span>
+        <span class="bar blue"></span>
+        <span class="bar red"></span>
+      </div>
+    </div>
+
+    <div class="services-cards-grid">
+      
+      <div class="service-card-item" data-aos="fade-up">
+        <div class="card-image">
+          <img src="images/hero1.png" alt="Appendix Surgery">
+          <div class="img-badge">Appendix  Surgery</div>
+        </div>
+        <div class="card-content">
+          <h3>Appendix Surgery (Appendectomy)</h3>
+          <p class="description">
+            Appendix surgery, or appendectomy, is the surgical removal of the appendix when it becomes inflamed or infected. We specialize in laparoscopic (keyhole) surgery, which uses small incisions and a camera for high precision. This modern approach ensures minimal tissue trauma, significantly reduces the risk of post-operative infections, and allows patients to return to their normal daily routine much faster than traditional open surgery methods.
+          </p>
+          
+          <div class="points-list">
+            <div class="point-row">
+              <i class="fas fa-check-circle"></i>
+              <span>Laparoscopic & Open Surgical Options</span>
+            </div>
+            <div class="point-row">
+              <i class="fas fa-check-circle"></i>
+              <span>Minimal Post-Operative Pain & Scarring</span>
+            </div>
+            <div class="point-row">
+              <i class="fas fa-check-circle"></i>
+              <span>Faster Recovery and Quick Hospital Discharge</span>
+            </div>
+            <div class="point-row">
+              <i class="fas fa-check-circle"></i>
+              <span>Comprehensive Post-Surgery Care & Follow-up</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="service-card-item" data-aos="fade-up" data-aos-delay="200">
+        <div class="card-image">
+          <img src="images/hero2.png" alt="Gallbladder Surgery">
+          <div class="img-badge">Gallbladder Removal</div>
+        </div>
+        <div class="card-content">
+          <h3>Gallbladder Removal (Cholecystectomy)</h3>
+          <p class="description">
+            Cholecystectomy is the surgical procedure to remove the gallbladder, primarily used to treat symptomatic gallstones and biliary conditions. Using advanced laparoscopic technology, we perform "Key-hole" surgery that offers superior precision. Our surgeons ensure safe duct identification and removal with minimal blood loss. This procedure is highly effective in providing permanent relief from gallbladder pain and digestive issues with a very high success rate and safety profile.
+          </p>
+          
+          <div class="points-list">
+            <div class="point-row">
+              <i class="fas fa-check-circle"></i>
+              <span>Advanced 4K Laparoscopic Visualization</span>
+            </div>
+            <div class="point-row">
+              <div class="icon-wrap"><i class="fas fa-check-circle"></i></div>
+              <span>Same-Day or 24-Hour Discharge Possible</span>
+            </div>
+            <div class="point-row">
+              <i class="fas fa-check-circle"></i>
+              <span>Highly Precise Gallstone Clearance</span>
+            </div>
+            <div class="point-row">
+              <i class="fas fa-check-circle"></i>
+              <span>Minimal Incisions for Superior Cosmetic Results</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="timeline-section">
+
+<h2 class="timeline-title">OUR APPROACH</h2>
+
+<div class="timeline">
+
+<!-- STEP 1 -->
+<div class="timeline-row reveal">
+<div class="timeline-card left">
+<i class="fa-solid fa-user-doctor icon"></i>
+<h3>Patient Consultation</h3>
+<p>Understanding patient condition with detailed clinical evaluation.</p>
+</div>
+<div class="timeline-number">01</div>
+</div>
+
+<!-- STEP 2 -->
+<div class="timeline-row reveal">
+<div class="timeline-card right">
+<i class="fa-solid fa-notes-medical icon"></i>
+<h3>Diagnosis & Planning</h3>
+<p>Accurate diagnosis with advanced medical assessment and planning.</p>
+</div>
+<div class="timeline-number">02</div>
+</div>
+
+<!-- STEP 3 -->
+<div class="timeline-row reveal">
+<div class="timeline-card left">
+<i class="fa-solid fa-x-ray icon"></i>
+<h3>Pre-Surgical Evaluation</h3>
+<p>Detailed tests and scans to ensure safe surgical procedure.</p>
+</div>
+<div class="timeline-number">03</div>
+</div>
+
+<!-- STEP 4 -->
+<div class="timeline-row reveal">
+<div class="timeline-card right">
+<i class="fa-solid fa-user-nurse icon"></i>
+<h3>Minimally Invasive Surgery</h3>
+<p>Advanced laparoscopic techniques for faster recovery.</p>
+</div>
+<div class="timeline-number">04</div>
+</div>
+
+<!-- STEP 5 -->
+<div class="timeline-row reveal">
+<div class="timeline-card left">
+<i class="fa-solid fa-heart-pulse icon"></i>
+<h3>Post-Operative Care</h3>
+<p>Continuous monitoring and support for smooth healing.</p>
+</div>
+<div class="timeline-number">05</div>
+</div>
+
+</div>
+</section>
+
+<script>
+const items = document.querySelectorAll(".reveal");
+
+window.addEventListener("scroll", () => {
+  items.forEach(el => {
+    const pos = el.getBoundingClientRect().top;
+
+    if (pos < window.innerHeight - 100) {
+      el.classList.add("show");
+    }
+  });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="vision-mission-section" id="vision">
+  <div class="container">
+    
+    <div class="main-header-center" data-aos="fade-down">
+      <span class="sub-tag">Our Philosophy</span>
+      <h2 class="title">Vision & <span>Mission</span></h2>
+      <div class="header-variation">
+       
+      </div>
+    </div>
+
+    <div class="vm-cards-grid">
+      
+      <div class="vm-card vision" data-aos="fade-right">
+        <div class="vm-icon-circle">
+          <i class="fas fa-eye"></i>
+        </div>
+        <div class="vm-content">
+          <h3>Our Vision</h3>
+          <p class="vm-desc">To be a leading center of excellence in surgical care, recognized for our commitment to precision, innovation, and compassionate healing. We aim to set new benchmarks in patient outcomes through advanced technology and ethical medical practices.</p>
+          
+        <ul class="vm-list">
+
+<li class="vm-point-row">
+<i class="fas fa-microscope"></i>
+<span>Global surgical standards</span>
+</li>
+
+<li class="vm-point-row">
+<i class="fas fa-laptop-medical"></i>
+<span>Advanced laparoscopic techniques</span>
+</li>
+
+<li class="vm-point-row">
+<i class="fas fa-stethoscope"></i>
+<span>Ethical & safe patient care</span>
+</li>
+
+</ul>
+        </div>
+      </div>
+
+      <div class="vm-card mission" data-aos="fade-left">
+        <div class="vm-icon-circle">
+          <i class="fas fa-bullseye"></i>
+        </div>
+        <div class="vm-content">
+          <h4>Our Mission</h4>
+          <p class="vm-desc">Our mission is to provide accessible, high-quality general and laparoscopic surgical services. We are dedicated to ensuring patient safety, rapid recovery, and personalized attention, treating every patient with the dignity and care they deserve.</p>
+          
+        <ul class="vm-list">
+
+<li class="vm-point-row">
+<i class="fas fa-user-shield"></i>
+<span>Transparent patient care</span>
+</li>
+
+<li class="vm-point-row">
+<i class="fas fa-hand-holding-medical"></i>
+<span>Accessible quality treatment</span>
+</li>
+
+<li class="vm-point-row">
+<i class="fas fa-heartbeat"></i>
+<span>Care with integrity & dignity</span>
+</li>
+
+</ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="why-choose-us">
+    <div class="container">
+        <div class="section-header" data-aos="fade-up">
+            <span>Our Excellence</span>
+            <h2>Why Choose Us</h2>
+          
+        </div>
+
+        <div class="features-grid">
+            <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="icon-box">
+                    <i class="fas fa-rocket"></i>
+                </div>
+                <h3>Fast Delivery</h3>
+                <p>Memu prathi project ni on-time lo high quality tho deliver chestham.</p>
+            </div>
+
+            <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="icon-box">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <h3>Secure Solutions</h3>
+                <p>Mee data mariyu privacy maaku priority. 100% secure coding standards.</p>
+            </div>
+
+            <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="icon-box">
+                    <i class="fas fa-headset"></i>
+                </div>
+                <h3>24/7 Support</h3>
+                <p>Eppudu eavasaram vachina ma team support ivvadaniki ready ga untundi.</p>
+            </div>
+
+            <div class="feature-card" data-aos="fade-up" data-aos-delay="400">
+                <div class="icon-box">
+                    <i class="fas fa-gem"></i>
+                </div>
+                <h3>Premium Quality</h3>
+                <p>Unmatched quality mariyu modern designs tho mee business ni boost chestham.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="facilities-section">
+    <div class="container">
+        <div class="fac-header" data-aos="fade-up">
+            <h2>OUR FACILITIES</h2>
+         
+        </div>
+
+        <div class="facilities-grid">
+            <div class="facility-card" data-aos="zoom-in" data-aos-delay="50">
+                <div class="icon-wrapper"><i class="fas fa-video"></i></div>
+                <h3>Advanced Laparoscopy</h3>
+            </div>
+            <div class="facility-card" data-aos="zoom-in" data-aos-delay="100">
+                <div class="icon-wrapper"><i class="fas fa-user-md"></i></div>
+                <h3>General Surgery</h3>
+            </div>
+            <div class="facility-card" data-aos="zoom-in" data-aos-delay="150">
+                <div class="icon-wrapper"><i class="fas fa-hospital-alt"></i></div>
+                <h3>Modular OT</h3>
+            </div>
+            <div class="facility-card" data-aos="zoom-in" data-aos-delay="200">
+                <div class="icon-wrapper"><i class="fas fa-ambulance"></i></div>
+                <h3>24/7 Emergency</h3>
+            </div>
+            <div class="facility-card" data-aos="zoom-in" data-aos-delay="250">
+                <div class="icon-wrapper"><i class="fas fa-bed"></i></div>
+                <h3>ICU Facility</h3>
+            </div>
+            <div class="facility-card" data-aos="zoom-in" data-aos-delay="300">
+                <div class="icon-wrapper"><i class="fas fa-stethoscope"></i></div>
+                <h3>Diagnostic Lab</h3>
+            </div>
+            <div class="facility-card" data-aos="zoom-in" data-aos-delay="350">
+                <div class="icon-wrapper"><i class="fas fa-appendicitis"></i><i class="fas fa-cut"></i></div>
+                <h3>Appendix Surgery</h3>
+            </div>
+            <div class="facility-card" data-aos="zoom-in" data-aos-delay="400">
+                <div class="icon-wrapper"><i class="fas fa-file-medical"></i></div>
+                <h3>Health Checkups</h3>
+            </div>
+            <div class="facility-card" data-aos="zoom-in" data-aos-delay="450">
+                <div class="icon-wrapper"><i class="fas fa-x-ray"></i></div>
+                <h3>Digital X-Ray</h3>
+            </div>
+            <div class="facility-card" data-aos="zoom-in" data-aos-delay="500">
+                <div class="icon-wrapper"><i class="fas fa-pills"></i></div>
+                <h3>Pharmacy</h3>
+            </div>
+            <div class="facility-card" data-aos="zoom-in" data-aos-delay="550">
+                <div class="icon-wrapper"><i class="fas fa-wave-square"></i></div>
+                <h3>ECG Services</h3>
+            </div>
+            <div class="facility-card" data-aos="zoom-in" data-aos-delay="600">
+                <div class="icon-wrapper"><i class="fas fa-heartbeat"></i></div>
+                <h3>Post-Op Care</h3>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+<section class="glass-highlights">
+    <div class="container">
+        <div class="glass-grid">
+            
+            <div class="glass-card">
+                <i class="fas fa-building"></i>
+                <h2 class="counter" data-target="600">0 +</h2>
+                <p>PROJECTS COMPLETED</p>
+            </div>
+
+            <div class="glass-card">
+                <i class="fas fa-user-friends"></i>
+                <h2 class="counter" data-target="500">0 +</h2>
+                <p>HAPPY CLIENTS</p>
+            </div>
+
+            <div class="glass-card">
+                <i class="fas fa-calendar-check"></i>
+                <h2 class="counter" data-target="5">0 +</h2>
+                <p>YEARS EXPERIENCE</p>
+            </div>
+
+            <div class="glass-card">
+                <i class="fas fa-user-cog"></i>
+                <h2 class="counter" data-target="50">0 +</h2>
+                <p>EXPERT TEAM</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<script>
+    const counters = document.querySelectorAll('.counter');
+    const speed = 100; // Animation speed (thaggisthe fast ga avtundi)
+
+    const startCounters = () => {
+        counters.forEach(counter => {
+            const updateCount = () => {
+                const target = +counter.getAttribute('data-target');
+                
+                // Number ni mathrame extract cheyyali (replace use chesi '+' ni theesesi)
+                const currentText = counter.innerText.replace('+', '');
+                const count = +currentText;
+
+                // Increment calculation
+                const inc = Math.ceil(target / speed);
+
+                if (count < target) {
+                    const nextCount = count + inc;
+                    
+                    // Final value target kante ekkuva avvakunda check cheyali
+                    if (nextCount > target) {
+                        counter.innerText = target + "+";
+                    } else {
+                        // Count avthunappudu kuda '+' symbols chupisthundi
+                        counter.innerText = nextCount + "+";
+                        setTimeout(updateCount, 20); 
+                    }
+                } else {
+                    counter.innerText = target + "+";
+                }
+            };
+            updateCount();
+        });
+    };
+
+    // Scroll trigger logic
+    const observerOptions = { threshold: 0.5 };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                startCounters();
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    const sectionToObserve = document.querySelector('.glass-highlights');
+    if(sectionToObserve) {
+        observer.observe(sectionToObserve);
+    }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="hospital-gallery-section" data-aos="fade-up">
+    <div class="gal-header">
+        <h2>HOSPITAL GALLERY</h2>
+        
+    </div>
+
+    <div class="gallery-marquee">
+        <div class="marquee-content">
+            <div class="gallery-item"><img src="images/hospital1.png" alt="Gallery 1"></div>
+            <div class="gallery-item"><img src="images/hospital1.png" alt="Gallery 2"></div>
+            <div class="gallery-item"><img src="images/hospital1.png" alt="Gallery 3"></div>
+            <div class="gallery-item"><img src="images/hospital1.png" alt="Gallery 4"></div>
+            <div class="gallery-item"><img src="images/hospital1.png" alt="Gallery 5"></div>
+            <div class="gallery-item"><img src="images/hospital1.png" alt="Gallery 6"></div>
+            <div class="gallery-item"><img src="images/hospital1.png" alt="Gallery 8"></div>
+            <div class="gallery-item"><img src="images/hospital1.png" alt="Gallery 4"></div>
+            
+             <div class="gallery-item"><img src="images/hospital1.png" alt="Gallery 1"></div>
+            <div class="gallery-item"><img src="images/hospital1.png" alt="Gallery 2"></div>
+            <div class="gallery-item"><img src="images/hospital1.png" alt="Gallery 3"></div>
+            <div class="gallery-item"><img src="images/hospital1.png" alt="Gallery 4"></div>
+             <div class="gallery-item"><img src="images/hospital1.png" alt="Gallery 5"></div>
+            
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+<section class="review-section" id="reviews">
+    <div class="container">
+        <div class="main-header-center" data-aos="fade-down">
+            <span class="sub-tag">Patient Feedback</span>
+            <h2 class="tit">Google <span>Reviews</span></h2>
+          
+        </div>
+
+        <div class="slider-master-container">
+            <div class="google-badge-fixed" data-aos="zoom-in">
+                <img src="images/google.png" alt="Google" class="g-icon">
+                <div class="g-text">
+                    <h4>Google Rating</h4>
+                    <div class="g-stars">
+                        <span>4.8</span>
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p>Based on 68+ Reviews</p>
+                </div>
+            </div>
+
+            <div class="slider-viewport">
+                <div class="review-track" id="reviewTrack">
+                    <div class="review-slide">
+                        <div class="rev-card">
+                            <div class="rev-header">
+                                <img src="https://ui-avatars.com/api/?name=Navya+Sree&background=e61d24&color=fff" alt="User">
+                                <div><h5>Navya Sree Navya</h5><span>2 months ago</span></div>
+                                <div class="rev-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            </div>
+                            <p>"Dr. Agastya has a gentle soul and cares deeply about his patients. My surgery went well and the aftercare was flawless. Best surgeon in Hanamkonda."</p>
+                        </div>
+                    </div>
+                    <div class="review-slide">
+                        <div class="rev-card">
+                            <div class="rev-header">
+                                <img src="https://ui-avatars.com/api/?name=Pojitha+Donikala&background=f99d26&color=fff" alt="User">
+                                <div><h5>Pojitha Donikala</h5><span>5 months ago</span></div>
+                                <div class="rev-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            </div>
+                            <p>"I underwent hernia surgery. Dr. Agastya explained everything clearly - the cause, procedure, and recovery - which helped me feel calm and confident."</p>
+                        </div>
+                    </div>
+                    <div class="review-slide">
+                        <div class="rev-card">
+                            <div class="rev-header">
+                                <img src="https://ui-avatars.com/api/?name=Dileep+Nalla&background=e61d24&color=fff" alt="User">
+                                <div><h5>Dileep Nalla</h5><span>9 months ago</span></div>
+                                <div class="rev-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            </div>
+                            <p>"Wonderful experience for laparoscopic appendix surgery. Hygienic hospital and professional staff. Dr. Agastya is highly skilled and very kind."</p>
+                        </div>
+                    </div>
+                    <div class="review-slide">
+                        <div class="rev-card">
+                            <div class="rev-header">
+                                <img src="https://ui-avatars.com/api/?name=Sushmitha+S&background=f99d26&color=fff" alt="User">
+                                <div><h5>Sushmitha Siripuram</h5><span>2 months ago</span></div>
+                                <div class="rev-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            </div>
+                            <p>"My husband underwent laparoscopic appendicitis surgery. We had a very good experience. Doctor explained everything clearly and surgery was smooth."</p>
+                        </div>
+                    </div>
+                    <div class="review-slide">
+                        <div class="rev-card">
+                            <div class="rev-header">
+                                <img src="https://ui-avatars.com/api/?name=Prashanth+B&background=e61d24&color=fff" alt="User">
+                                <div><h5>Bommagani Prashanth</h5><span>3 months ago</span></div>
+                                <div class="rev-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                            </div>
+                            <p>"My Father was treated by Dr. Agastya and we're very happy with results. He truly is the best General Surgeon in Hanamkonda now our father well."</p>
+                        </div>
+                    </div>
+                    </div>
+            </div>
+
+            <button class="slider-btn prev" id="prevBtn"><i class="fas fa-chevron-left"></i></button>
+            <button class="slider-btn next" id="nextBtn"><i class="fas fa-chevron-right"></i></button>
+        </div>
+    </div>
+</section>
+<script>
+    // 1. Exact classes from your HTML
+    const mainTrack = document.querySelector('.review-track');
+    const allSlides = document.querySelectorAll('.review-slide');
+    const btnNext = document.getElementById('nextBtn');
+    const btnPrev = document.getElementById('prevBtn');
+
+    let counter = 0;
+    const slideWidth = 100; // Since each slide is 100% width
+    const totalSlidesCount = allSlides.length;
+
+    // 2. Slide function
+    function moveToSlide(index) {
+        // Smooth transition enable chesthunnam
+        mainTrack.style.transition = "transform 0.6s cubic-bezier(0.4, 0, 0.2, 1)";
+        mainTrack.style.transform = `translateX(-${index * slideWidth}%)`;
+    }
+
+    // 3. Next Slide Logic (Seamless Infinite)
+    function handleNext() {
+        counter++;
+        moveToSlide(counter);
+
+        // Check if we are on the cloned last slide
+        if (counter === totalSlidesCount - 1) {
+            setTimeout(() => {
+                // Silent jump to the real 1st slide without animation
+                mainTrack.style.transition = "none";
+                counter = 0;
+                mainTrack.style.transform = `translateX(0%)`;
+            }, 600); // 0.6s transition tharuvatha jump
+        }
+    }
+
+    // 4. Prev Slide Logic
+    function handlePrev() {
+        if (counter <= 0) {
+            // Jump to the last clone instantly
+            mainTrack.style.transition = "none";
+            counter = totalSlidesCount - 1;
+            mainTrack.style.transform = `translateX(-${counter * slideWidth}%)`;
+            
+            // Then slide back to real last slide
+            setTimeout(() => {
+                counter--;
+                moveToSlide(counter);
+            }, 10);
+        } else {
+            counter--;
+            moveToSlide(counter);
+        }
+    }
+
+    // 5. Button Listeners
+    if(btnNext) {
+        btnNext.addEventListener('click', () => {
+            handleNext();
+            resetAutoPlay();
+        });
+    }
+
+    if(btnPrev) {
+        btnPrev.addEventListener('click', () => {
+            handlePrev();
+            resetAutoPlay();
+        });
+    }
+
+    // 6. Auto Play (5 Seconds)
+    let playInterval = setInterval(handleNext, 5000);
+
+    function resetAutoPlay() {
+        clearInterval(playInterval);
+        playInterval = setInterval(handleNext, 5000);
+    }
+</script>
+
+
+
+
+
+<section class="contact-section" id="contact">
+  <div class="contact-container">
+
+    <div class="contact-left" data-aos="fade-right">
+      <div class="info-wrapper">
+        <h3>Contact Information</h3>
+        <div class="contact-info-list">
+          <div class="info-item">
+            <i class="fas fa-phone"></i>
+            <span>+91 99558 99883</span>
+          </div>
+          <div class="info-item">
+            <i class="fas fa-envelope"></i>
+            <span>info@hospital.com</span>
+          </div>
+          <div class="info-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <span class="address-text">
+              H.No: 6-2-71 & 72, Kakaji Colony Road No 1,<br>
+              Near KR & MS Reddy Complex, Opp Veena Medicare,<br>
+              Hanamkonda, Warangal - 506001, Telangana
+            </span>
+          </div>
+        </div>
+        
+        <div class="map-container">
+        <iframe 
+  src="https://www.google.com/maps?q=Agasthya+Surgical+and+Multispeciality+Hospital+Hanamkonda&output=embed"
+  width="100%" 
+  height="250" 
+  style="border:0; border-radius:10px;" 
+  allowfullscreen="" 
+  loading="lazy">
+</iframe>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-right" data-aos="fade-left">
+      <div class="form-wrapper">
+        <h3>Book Appointment</h3>
+        <form id="contactForm">
+          <div class="input-group">
+            <i class="fas fa-user"></i>
+            <input type="text" id="name" placeholder="Full Name" required>
+            <!-- <i class="fas fa-check-circle validation-tick"></i> -->
+          </div>
+          <div class="input-group">
+            <i class="fas fa-phone"></i>
+            <input type="tel" id="phone" placeholder="Phone Number" required>
+            <!-- <i class="fas fa-check-circle validation-tick"></i> -->
+          </div>
+          <div class="input-group">
+            <i class="fas fa-envelope"></i>
+            <input type="email" id="email" placeholder="Email Address" required>
+            <!-- <i class="fas fa-check-circle validation-tick"></i> -->
+          </div>
+          <div class="input-group">
+            <i class="fas fa-comment-medical"></i>
+            <textarea id="message" placeholder="Describe your concern..." required></textarea>
+            <!-- <i class="fas fa-check-circle validation-tick"></i> -->
+          </div>
+
+          <button type="submit">
+            <span>Send Message</span>
+            <i class="fas fa-paper-plane"></i>
+          </button>
+
+          <div class="success-msg" id="successMsg">
+            <i class="fas fa-check-circle"></i> Message Sent Successfully!
+          </div>
+        </form>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<script>
+  const form = document.getElementById("contactForm");
+  const successMsg = document.getElementById("successMsg");
+
+  // Real-time Validation Function
+  const inputs = form.querySelectorAll('input, textarea');
+
+  inputs.forEach(input => {
+    input.addEventListener('input', () => {
+      const group = input.parentElement;
+      let isValid = false;
+
+      if (input.id === 'name') {
+        isValid = input.value.trim().length > 2;
+      } else if (input.id === 'phone') {
+        isValid = /^[0-9]{10}$/.test(input.value.trim()); // Exactly 10 digits
+      } else if (input.id === 'email') {
+        isValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(input.value.trim()); // Email format
+      } else if (input.id === 'message') {
+        isValid = input.value.trim().length > 5;
+      }
+
+      if (isValid) {
+        group.classList.add('valid');
+      } else {
+        group.classList.remove('valid');
+      }
+    });
+  });
+
+  // Form Submit Logic
+  form.addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const name = document.getElementById("name").value.trim();
+    const phone = document.getElementById("phone").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const message = document.getElementById("message").value.trim();
+
+    if (phone.length < 10) {
+      alert("Please enter a valid 10-digit phone number.");
+      return;
+    }
+
+    successMsg.style.display = "block";
+    successMsg.innerHTML = '<i class="fas fa-check-circle"></i> Opening WhatsApp...';
+
+    const whatsappNumber = "918074586016";
+    const text = `*New Appointment Inquiry*%0A` +
+                 `----------------------------%0A` +
+                 `*Name:* ${encodeURIComponent(name)}%0A` +
+                 `*Phone:* ${encodeURIComponent(phone)}%0A` +
+                 `*Email:* ${encodeURIComponent(email)}%0A` +
+                 `*Message:* ${encodeURIComponent(message)}%0A` +
+                 `----------------------------%0A` +
+                 `Sent via Hospital Website`;
+
+    const whatsappURL = `https://wa.me/${whatsappNumber}?text=${text}`;
+
+    setTimeout(() => {
+      window.open(whatsappURL, "_blank");
+      form.reset();
+      // Remove all ticks after reset
+      document.querySelectorAll('.input-group').forEach(g => g.classList.remove('valid'));
+      successMsg.style.display = "none";
+    }, 1500);
+  });
+</script>
+
+
+
+
+
+
+
+<footer class="footer">
+
+<div class="footer-container">
+
+<!-- 1. LOGO -->
+<div class="footer-col" data-aos="fade-up">
+<img src="images/flogo.png" class="footer-logo">
+<p>Advanced laparoscopic & general surgical care with precision and trust.</p>
+</div>
+
+<!-- 2. QUICK LINKS -->
+<div class="footer-col" data-aos="fade-up" data-aos-delay="100">
+<h4>Quick Links</h4>
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</div>
+
+<!-- 3. ADDRESS -->
+<div class="footer-col" data-aos="fade-up" data-aos-delay="200">
+<h4>Address</h4>
+<p>
+H.No: 6-2-71 & 72,
+Kakaji Colony Road No 1,
+Near KR & MS Reddy Complex,
+Opp Veena Medicare,<br>
+Hanamkonda, Warangal - 506001,<br>
+Telangana
+</p>
+
+<p class="phone">
+<i class="fas fa-phone"></i> +91 99558 99883
+</p>
+</div>
+
+<!-- 4. SOCIAL -->
+<div class="footer-col" data-aos="fade-up" data-aos-delay="300">
+<h4>Follow Us</h4>
+
+<div class="socials">
+<a href="#"><i class="fab fa-facebook-f"></i></a>
+<a href="#"><i class="fab fa-instagram"></i></a>
+<a href="#"><i class="fab fa-youtube"></i></a>
+</div>
+
+</div>
+
+</div>
+
+<!-- BOTTOM -->
+<div class="footer-bottom">
+<p>© 2026 Dr Agastya Hospital. All Rights Reserved.</p>
+</div>
+
+</footer>
+
+
+
+
+
+
+
+
+<!-- Floating Buttons -->
+
+<a href="https://wa.me/919955899883" class="float-whatsapp" target="_blank">
+<i class="fa-brands fa-whatsapp"></i>
+</a>
+
+<a href="tel:+919955899883" class="float-phone">
+<i class="fa-solid fa-phone"></i>
+</a>
+
