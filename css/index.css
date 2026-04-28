@@ -465,6 +465,7 @@ font-size:12px;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 30px;
+   text-align: justify;
   display: grid;
   grid-template-columns: 1.1fr 1fr; /* Image side ki konchem ekkuva space */
   gap: 60px;
@@ -558,8 +559,9 @@ font-size:12px;
 }
 
 .about-premium-content h2 {
-  font-size: 44px;
+  font-size: 40px;
   color: #0282a5;
+  font-weight: 800;
   margin-bottom: 20px;
   line-height: 1.2;
 }
@@ -645,6 +647,7 @@ font-size:12px;
   .p-about-container {
     grid-template-columns: 1fr;
     gap: 40px;
+    text-align: justify;
     padding: 0 15px;
   }
 
@@ -859,7 +862,7 @@ font-size:12px;
 
 .doc-name-title {
   font-size: 42px;
-  text-transform: uppercase;
+  
   font-weight: 800;
   color: var(--h-blue);
   line-height: 1.1;
@@ -1278,7 +1281,7 @@ font-size:12px;
 }
 
 .card-content h3 {
-  font-size: 24px;
+  font-size: 22px;
   color: #0282a5;
   margin-bottom: 20px;
   font-weight: 800;
