@@ -2702,13 +2702,13 @@ text-transform: uppercase;
 
 .footer-col ul li a {
   text-decoration: none;
-  color: #cbd5f5;
-  font-size: 14px;
+  color: white;
+  font-size: 16px;
   transition: 0.3s;
 }
 
 .footer-col ul li a:hover {
-  color: #f99d26;
+  color: #e61d24;
   padding-left: 5px;
 }
 
@@ -2733,7 +2733,7 @@ text-transform: uppercase;
 }
 
 .socials a:hover {
-  background: #f99d26;
+  background: #e61d24;
   transform: translateY(-4px);
 }
 
