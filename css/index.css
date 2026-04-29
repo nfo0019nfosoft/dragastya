@@ -767,6 +767,7 @@ font-size:12px;
 
   .doctor-bio {
     font-size: 14px;
+    text-align: justify;
   }
 
   /* POINTS */
@@ -1406,6 +1407,63 @@ font-size:12px;
 }
 
 }
+
+
+
+
+
+
+
+
+/* CARD CONTENT */
+.card-content{
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* 🔥 center horizontally */
+  text-align: center;
+}
+
+/* BUTTON */
+.read-more-btn{
+  display: inline-block;
+  margin-top: 30px;
+
+
+  background: linear-gradient(135deg, #ff4d4f, #d9468f);
+  color: #fff;
+
+  padding: 10px 26px;
+  border-radius: 30px; /* 🔥 pill shape */
+
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+
+  transition: all 0.3s ease;
+}
+
+/* HOVER */
+.read-more-btn:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(255,77,79,0.3);
+}
+
+/* MOBILE */
+@media(max-width:768px){
+
+  .read-more-btn{
+    padding: 11px 22px;
+    font-size: 13px;
+  }
+
+}
+
+
+
+
+
+
+
 
 
 

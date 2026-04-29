@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>CONTACT US - Dr.AGASTYA</title>
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<link rel="icon" type="image/png" href="images/fav.png">
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<link rel="stylesheet" href="css/contact.css">
+
+</head>
+
+<body>
+<!-- TOP BAR -->
+<div class="top-bar">
+  <div class="top-container">
+
+    <div class="top-left">
+      <span><i class="fa-solid fa-phone"></i> +91 99558 99883</span>
+      <span><i class = "fa-solid fa-map-marker-alt"></i>Hanamkonda - Telangana</span>
+      <span><i class="fa-solid fa-envelope"></i> info@hospital.com</span>
+    </div>
+
+    <div class="top-right">
+      <a href="https://www.facebook.com/profile.php?id=61573266621518" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+      <a href="https://www.instagram.com/dr_agastya_surgeon/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+           <!-- <a href="" target="_blank"><i class="fa-brands fa-youtube"></i></a> -->
+
+    </div>
+
+  </div>
+</div>
+
+<header id="navbar">
+
+<div class="nav-container">
+
+<!-- LOGO -->
+
+<div class="logo">
+<a href="index.html">
+<img src="images/logo.png" alt="Company Logo">
+</a>
+</div>
+
+
+<!-- NAV LINKS -->
+<ul class="nav-links">
+
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="services.html">Services</a></li>
+<li><a href="contact.html">Contact</a></li>
+
+</ul>
+<a href="contact.html" class="nav-cta">BOOK APPOINTMENT</a>
+
+<!-- MOBILE MENU -->
+
+<div class="menu-toggle">
+☰
+</div>
+
+
+</div>
+
+</header>
+
+<script>
+
+const menuToggle = document.querySelector(".menu-toggle");
+const navLinks = document.querySelector(".nav-links");
+const navbar = document.getElementById("navbar");
+
+/* MOBILE MENU */
+menuToggle.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+});
+
+/* NAVBAR SHADOW ON SCROLL */
+window.addEventListener("scroll", () => {
+  if(window.scrollY > 80){
+    navbar.classList.add("navbar-scrolled");
+  } else {
+    navbar.classList.remove("navbar-scrolled");
+  }
+});
+
+</script>
+
+
+
+
+<script>
+AOS.init({
+  duration: 1000,
+  once: true,
+  easing: "ease-in-out",
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="contact-section" id="contact">
+  <div class="contact-container">
+
+    <div class="contact-left" data-aos="fade-right">
+      <div class="info-wrapper">
+        <h3>Contact Information</h3>
+        <div class="contact-info-list">
+          <div class="info-item">
+            <i class="fas fa-phone"></i>
+            <span>+91 99558 99883</span>
+          </div>
+          <div class="info-item">
+            <i class="fas fa-envelope"></i>
+            <span>info@hospital.com</span>
+          </div>
+          <div class="info-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <span class="address-text">
+              H.No: 6-2-71 & 72, Kakaji Colony Road No 1,<br>
+              Near KR & MS Reddy Complex, Opp Veena Medicare,<br>
+              Hanamkonda, Warangal - 506001, Telangana
+            </span>
+          </div>
+        </div>
+        
+        <div class="map-container">
+        <iframe 
+  src="https://www.google.com/maps?q=Agasthya+Surgical+and+Multispeciality+Hospital+Hanamkonda&output=embed"
+  width="100%" 
+  height="250" 
+  style="border:0; border-radius:10px;" 
+  allowfullscreen="" 
+  loading="lazy">
+</iframe>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-right" data-aos="fade-left">
+      <div class="form-wrapper">
+        <h3>Book Appointment</h3>
+        <form id="contactForm">
+          <div class="input-group">
+            <i class="fas fa-user"></i>
+            <input type="text" id="name" placeholder="Full Name" required>
+            <!-- <i class="fas fa-check-circle validation-tick"></i> -->
+          </div>
+          <div class="input-group">
+            <i class="fas fa-phone"></i>
+            <input type="tel" id="phone" placeholder="Phone Number" required>
+            <!-- <i class="fas fa-check-circle validation-tick"></i> -->
+          </div>
+          <div class="input-group">
+            <i class="fas fa-envelope"></i>
+            <input type="email" id="email" placeholder="Email Address" required>
+            <!-- <i class="fas fa-check-circle validation-tick"></i> -->
+          </div>
+          <div class="input-group">
+            <i class="fas fa-comment-medical"></i>
+            <textarea id="message" placeholder="Describe your concern..." required></textarea>
+            <!-- <i class="fas fa-check-circle validation-tick"></i> -->
+          </div>
+
+          <button type="submit">
+            <span>Send Message</span>
+            <i class="fas fa-paper-plane"></i>
+          </button>
+
+          <div class="success-msg" id="successMsg">
+            <i class="fas fa-check-circle"></i> Message Sent Successfully!
+          </div>
+        </form>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<script>
+  const form = document.getElementById("contactForm");
+  const successMsg = document.getElementById("successMsg");
+
+  // Real-time Validation Function
+  const inputs = form.querySelectorAll('input, textarea');
+
+  inputs.forEach(input => {
+    input.addEventListener('input', () => {
+      const group = input.parentElement;
+      let isValid = false;
+
+      if (input.id === 'name') {
+        isValid = input.value.trim().length > 2;
+      } else if (input.id === 'phone') {
+        isValid = /^[0-9]{10}$/.test(input.value.trim()); // Exactly 10 digits
+      } else if (input.id === 'email') {
+        isValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(input.value.trim()); // Email format
+      } else if (input.id === 'message') {
+        isValid = input.value.trim().length > 5;
+      }
+
+      if (isValid) {
+        group.classList.add('valid');
+      } else {
+        group.classList.remove('valid');
+      }
+    });
+  });
+
+  // Form Submit Logic
+  form.addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const name = document.getElementById("name").value.trim();
+    const phone = document.getElementById("phone").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const message = document.getElementById("message").value.trim();
+
+    if (phone.length < 10) {
+      alert("Please enter a valid 10-digit phone number.");
+      return;
+    }
+
+    successMsg.style.display = "block";
+    successMsg.innerHTML = '<i class="fas fa-check-circle"></i> Opening WhatsApp...';
+
+    const whatsappNumber = "918074586016";
+    const text = `*New Appointment Inquiry*%0A` +
+                 `----------------------------%0A` +
+                 `*Name:* ${encodeURIComponent(name)}%0A` +
+                 `*Phone:* ${encodeURIComponent(phone)}%0A` +
+                 `*Email:* ${encodeURIComponent(email)}%0A` +
+                 `*Message:* ${encodeURIComponent(message)}%0A` +
+                 `----------------------------%0A` +
+                 `Sent via Hospital Website`;
+
+    const whatsappURL = `https://wa.me/${whatsappNumber}?text=${text}`;
+
+    setTimeout(() => {
+      window.open(whatsappURL, "_blank");
+      form.reset();
+      // Remove all ticks after reset
+      document.querySelectorAll('.input-group').forEach(g => g.classList.remove('valid'));
+      successMsg.style.display = "none";
+    }, 1500);
+  });
+</script>
+
+
+
+
+
+
+
+<footer class="footer">
+
+<div class="footer-container">
+
+<!-- 1. LOGO -->
+<div class="footer-col" data-aos="fade-up">
+<img src="images/flogo.png" class="footer-logo">
+<p>Advanced laparoscopic & general surgical care with precision and trust.</p>
+</div>
+
+<!-- 2. QUICK LINKS -->
+<div class="footer-col" data-aos="fade-up" data-aos-delay="100">
+<h4>Quick Links</h4>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="services.html">Services</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+</div>
+
+<!-- 3. ADDRESS -->
+<div class="footer-col" data-aos="fade-up" data-aos-delay="200">
+<h4>Address</h4>
+<p>
+H.No: 6-2-71 & 72,
+Kakaji Colony Road No 1,
+Near KR & MS Reddy Complex,
+Opp Veena Medicare,<br>
+Hanamkonda, Warangal - 506001,<br>
+Telangana
+</p>
+
+<p class="phone">
+<i class="fas fa-phone"></i> +91 99558 99883
+</p>
+</div>
+
+<!-- 4. SOCIAL -->
+<div class="footer-col" data-aos="fade-up" data-aos-delay="300">
+<h4>Follow Us</h4>
+
+<div class="socials">
+<a href="https://www.facebook.com/profile.php?id=61573266621518"><i class="fab fa-facebook-f"></i></a>
+<a href="https://www.instagram.com/dr_agastya_surgeon/"><i class="fab fa-instagram"></i></a>
+<!-- <a href="#"><i class="fab fa-youtube"></i></a> -->
+</div>
+
+</div>
+
+</div>
+
+<!-- BOTTOM -->
+<div class="footer-bottom">
+<p>© 2026 Dr Agastya Hospital. All Rights Reserved.</p>
+</div>
+
+</footer>
+
+
+
+
+
+
+
+
+<!-- Floating Buttons -->
+
+<a href="https://wa.me/919955899883" class="float-whatsapp" target="_blank">
+<i class="fa-brands fa-whatsapp"></i>
+</a>
+
+<a href="tel:+919955899883" class="float-phone">
+<i class="fa-solid fa-phone"></i>
+</a>
+

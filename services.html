@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title> SERVICES - Dr.AGASTYA</title>
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<link rel="icon" type="image/png" href="images/fav.png">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<link rel="stylesheet" href="css/services.css">
+
+</head>
+
+<body>
+<!-- TOP BAR -->
+<div class="top-bar">
+  <div class="top-container">
+
+    <div class="top-left">
+      <span><i class="fa-solid fa-phone"></i> +91 99558 99883</span>
+      <span><i class = "fa-solid fa-map-marker-alt"></i>Hanamkonda - Telangana</span>
+      <span><i class="fa-solid fa-envelope"></i> info@hospital.com</span>
+    </div>
+
+    <div class="top-right">
+      <a href="https://www.facebook.com/profile.php?id=61573266621518" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+      <a href="https://www.instagram.com/dr_agastya_surgeon/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+           <!-- <a href="" target="_blank"><i class="fa-brands fa-youtube"></i></a> -->
+
+    </div>
+
+  </div>
+</div>
+
+<header id="navbar">
+
+<div class="nav-container">
+
+<!-- LOGO -->
+
+<div class="logo">
+<a href="index.html">
+<img src="images/logo.png" alt="Company Logo">
+</a>
+</div>
+
+
+<!-- NAV LINKS -->
+<ul class="nav-links">
+
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="services.html">Services</a></li>
+<li><a href="contact.html">Contact</a></li>
+
+</ul>
+<a href="contact.html" class="nav-cta">BOOK APPOINTMENT</a>
+
+<!-- MOBILE MENU -->
+
+<div class="menu-toggle">
+☰
+</div>
+
+
+</div>
+
+</header>
+
+<script>
+
+const menuToggle = document.querySelector(".menu-toggle");
+const navLinks = document.querySelector(".nav-links");
+const navbar = document.getElementById("navbar");
+
+/* MOBILE MENU */
+menuToggle.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+});
+
+/* NAVBAR SHADOW ON SCROLL */
+window.addEventListener("scroll", () => {
+  if(window.scrollY > 80){
+    navbar.classList.add("navbar-scrolled");
+  } else {
+    navbar.classList.remove("navbar-scrolled");
+  }
+});
+
+</script>
+
+
+
+
+<script>
+AOS.init({
+  duration: 1000,
+  once: true,
+  easing: "ease-in-out",
+});
+</script>
+
+
+
+<!-- ── HERO ── -->
+<section class="services-hero">
+  <div class="hero-inner">
+    <span class="hero-tag">Expert Surgical Care</span>
+    <h1 class="hero-title">Our Medical Services</h1>
+    <p class="hero-desc">Advanced surgical procedures performed with precision, compassion, and modern minimally invasive techniques — helping you recover faster and live better.</p>
+   
+  </div>
+</section>
+
+<!-- ── SERVICES ── -->
+<section class="services-page-section">
+
+  <!-- 1 -->
+  <div class="service-block">
+    <div class="sb-image">
+      <img src="images/ser1.png" alt="Appendix Surgery">
+      <span class="sb-num">01</span>
+      <span class="sb-badge">Appendix Surgery</span>
+    </div>
+    <div class="sb-content">
+      <p class="sb-category">General Surgery</p>
+      <h2 class="sb-title">Appendix Surgery (Appendectomy)</h2>
+      <p class="sb-desc">Appendectomy is the surgical removal of the inflamed or infected appendix. We specialize in laparoscopic (keyhole) surgery using small incisions and a camera for high precision. This modern approach minimizes tissue trauma, reduces post-operative infection risk, and allows patients to return to their normal routine significantly faster than traditional open methods.</p>
+      <div class="sb-features">
+        <div class="sb-feat"><i class="fas fa-check-circle"></i><span>Laparoscopic &amp; Open Surgical Options</span></div>
+        <div class="sb-feat"><i class="fas fa-check-circle"></i><span>Minimal Post-Operative Pain &amp; Scarring</span></div>
+        <div class="sb-feat"><i class="fas fa-check-circle"></i><span>Faster Recovery &amp; Quick Discharge</span></div>
+        <div class="sb-feat"><i class="fas fa-check-circle"></i><span>Comprehensive Post-Surgery Follow-up</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2 -->
+  <div class="service-block reverse">
+    <div class="sb-image">
+      <img src="images/ser2.png" alt="Gallbladder Surgery">
+      <span class="sb-num">02</span>
+      <span class="sb-badge">Gallbladder Removal</span>
+    </div>
+    <div class="sb-content">
+      <p class="sb-category">Laparoscopic Surgery</p>
+      <h2 class="sb-title">Gallbladder Removal (Cholecystectomy)</h2>
+      <p class="sb-desc">Cholecystectomy removes the gallbladder to treat symptomatic gallstones and biliary conditions. Using advanced 4K laparoscopic technology, our surgeons perform keyhole surgery offering superior precision with minimal blood loss. This procedure provides permanent relief from gallbladder pain and digestive issues with a very high success and safety profile.</p>
+      <div class="sb-features">
+        <div class="sb-feat"><i class="fas fa-check-circle"></i><span>Advanced 4K Laparoscopic Visualization</span></div>
+        <div class="sb-feat"><i class="fas fa-check-circle"></i><span>Same-Day or 24-Hour Discharge</span></div>
+        <div class="sb-feat"><i class="fas fa-check-circle"></i><span>Highly Precise Gallstone Clearance</span></div>
+        <div class="sb-feat"><i class="fas fa-check-circle"></i><span>Minimal Incisions &amp; Superior Results</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3 -->
+  <div class="service-block">
+    <div class="sb-image">
+      <img src="images/ser3.png" alt="Hernia Repair Surgery">
+      <span class="sb-num">03</span>
+      <span class="sb-badge">Hernia Repair</span>
+    </div>
+    <div class="sb-content">
+      <p class="sb-category">Abdominal Surgery</p>
+      <h2 class="sb-title">Hernia Repair (Inguinal, Umbilical, Incisional)</h2>
+      <p class="sb-desc">Hernia repair corrects a weakness in the abdominal wall where internal tissues protrude. We treat inguinal, umbilical, and incisional hernias using advanced laparoscopic and mesh-based techniques. Our minimally invasive approach ensures precise repair with reduced pain, faster recovery, and significantly lower recurrence rates — helping patients return quickly to normal activities.</p>
+      <div class="sb-features">
+        <div class="sb-feat"><i class="fas fa-check-circle"></i><span>Laparoscopic &amp; Mesh Repair Techniques</span></div>
+        <div class="sb-feat"><i class="fas fa-check-circle"></i><span>Quick Recovery, Minimal Pain</span></div>
+        <div class="sb-feat"><i class="fas fa-check-circle"></i><span>Low Recurrence with Strong Reinforcement</span></div>
+        <div class="sb-feat"><i class="fas fa-check-circle"></i><span>Small Incisions for Better Cosmetic Outcome</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4 -->
+  <div class="service-block reverse">
+    <div class="sb-image">
+      <img src="images/ser4.png" alt="Hydrocele Surgery">
+      <span class="sb-num">04</span>
+      <span class="sb-badge">Hydrocele Treatment</span>
+    </div>
+    <div class="sb-content">
+      <p class="sb-category">Urology Surgery</p>
+      <h2 class="sb-title">Hydrocele Surgery (Hydrocelectomy)</h2>
+      <p class="sb-desc">Hydrocelectomy treats fluid accumulation around the testicle causing scrotal swelling and discomfort. Our surgical approach focuses on safe fluid removal and prevention of recurrence using advanced techniques. The procedure is typically quick, minimally invasive, and performed under expert supervision to ensure maximum comfort and rapid return to daily activities.</p>
+      <div class="sb-features">
+        <div class="sb-feat"><i class="fas fa-check-circle"></i><span>Safe &amp; Effective Fluid Removal</span></div>
+        <div class="sb-feat"><i class="fas fa-check-circle"></i><span>Short Procedure, Quick Recovery</span></div>
+        <div class="sb-feat"><i class="fas fa-check-circle"></i><span>Minimal Discomfort, Low Recurrence</span></div>
+        <div class="sb-feat"><i class="fas fa-check-circle"></i><span>Daycare Procedure in Most Cases</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 5 -->
+  <div class="service-block">
+    <div class="sb-image">
+      <img src="images/ser5.png" alt="Circumcision Surgery">
+      <span class="sb-num">05</span>
+      <span class="sb-badge">Circumcision</span>
+    </div>
+    <div class="sb-content">
+      <p class="sb-category">Minor Surgical Procedure</p>
+      <h2 class="sb-title">Circumcision (Prepuce Removal Surgery)</h2>
+      <p class="sb-desc">Circumcision involves the removal of the foreskin, performed for medical conditions such as phimosis, recurrent infections, or hygiene-related concerns. We offer advanced laser and minimally invasive techniques ensuring precision, reduced bleeding, and faster healing. The procedure is safe, quick, and typically completed as a daycare treatment with excellent cosmetic outcomes.</p>
+      <div class="sb-features">
+        <div class="sb-feat"><i class="fas fa-check-circle"></i><span>Advanced Laser &amp; Stapler Techniques</span></div>
+        <div class="sb-feat"><i class="fas fa-check-circle"></i><span>Same-Day Discharge</span></div>
+        <div class="sb-feat"><i class="fas fa-check-circle"></i><span>Minimal Pain &amp; Faster Healing</span></div>
+        <div class="sb-feat"><i class="fas fa-check-circle"></i><span>Excellent Cosmetic &amp; Hygiene Results</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 6 -->
+  <div class="service-block reverse">
+    <div class="sb-image">
+      <img src="images/ser6.png" alt="Piles Fissure Fistula">
+      <span class="sb-num">06</span>
+      <span class="sb-badge">Proctology Care</span>
+    </div>
+    <div class="sb-content">
+      <p class="sb-category">Proctology</p>
+      <h2 class="sb-title">Piles, Fissure &amp; Fistula Surgery</h2>
+      <p class="sb-desc">We provide advanced treatment for piles (hemorrhoids), anal fissures, and fistulas using modern laser and minimally invasive techniques. These conditions often cause pain, bleeding, and discomfort during daily activities. Our procedures focus on precise treatment with minimal tissue damage, reduced pain, faster healing, and low recurrence for an improved quality of life.</p>
+      <div class="sb-features">
+        <div class="sb-feat"><i class="fas fa-check-circle"></i><span>Advanced Laser Treatment</span></div>
+        <div class="sb-feat"><i class="fas fa-check-circle"></i><span>Painless with Minimal Bleeding</span></div>
+        <div class="sb-feat"><i class="fas fa-check-circle"></i><span>Quick Recovery, Early Routine Return</span></div>
+        <div class="sb-feat"><i class="fas fa-check-circle"></i><span>Low Recurrence, Long-Term Relief</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 7 -->
+  <div class="service-block">
+    <div class="sb-image">
+      <img src="images/ser7.png" alt="Hysterectomy Surgery">
+      <span class="sb-num">07</span>
+      <span class="sb-badge">Hysterectomy</span>
+    </div>
+    <div class="sb-content">
+      <p class="sb-category">Gynaecological Surgery</p>
+      <h2 class="sb-title">Hysterectomy (Uterus Removal Surgery)</h2>
+      <p class="sb-desc">Hysterectomy removes the uterus to treat fibroids, abnormal bleeding, endometriosis, or uterine prolapse. We offer advanced laparoscopic and minimally invasive techniques ensuring precision, reduced blood loss, and faster recovery. Our expert surgeons focus on patient safety and comfort, delivering effective treatment with minimal scarring and a smooth return to daily life.</p>
+      <div class="sb-features">
+        <div class="sb-feat"><i class="fas fa-check-circle"></i><span>Laparoscopic &amp; Minimally Invasive</span></div>
+        <div class="sb-feat"><i class="fas fa-check-circle"></i><span>Reduced Blood Loss &amp; Precision</span></div>
+        <div class="sb-feat"><i class="fas fa-check-circle"></i><span>Faster Recovery, Short Hospital Stay</span></div>
+        <div class="sb-feat"><i class="fas fa-check-circle"></i><span>Minimal Scarring, Improved Comfort</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 8 -->
+  <div class="service-block reverse">
+    <div class="sb-image">
+      <img src="images/ser8.png" alt="Vasectomy Procedure">
+      <span class="sb-num">08</span>
+      <span class="sb-badge">Vasectomy</span>
+    </div>
+    <div class="sb-content">
+      <p class="sb-category">Male Sterilization</p>
+      <h2 class="sb-title">Vasectomy (Male Sterilization Procedure)</h2>
+      <p class="sb-desc">Vasectomy is a safe and effective minor surgical procedure for permanent male contraception. It involves blocking the vas deferens to prevent sperm from entering the semen. Our specialists perform minimally invasive no-scalpel techniques ensuring precision, minimal discomfort, and quick recovery — typically completed as a daycare treatment with high safety and success rates.</p>
+      <div class="sb-features">
+        <div class="sb-feat"><i class="fas fa-check-circle"></i><span>No-Scalpel Minimally Invasive</span></div>
+        <div class="sb-feat"><i class="fas fa-check-circle"></i><span>Same-Day Discharge</span></div>
+        <div class="sb-feat"><i class="fas fa-check-circle"></i><span>Minimal Pain &amp; Fast Recovery</span></div>
+        <div class="sb-feat"><i class="fas fa-check-circle"></i><span>Highly Effective &amp; Permanent</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 9 -->
+  <div class="service-block">
+    <div class="sb-image">
+      <img src="images/ser9.png" alt="Breast Lump Removal">
+      <span class="sb-num">09</span>
+      <span class="sb-badge">Breast Lump Removal</span>
+    </div>
+    <div class="sb-content">
+      <p class="sb-category">Breast Surgery</p>
+      <h2 class="sb-title">Breast Lump Removal (Lumpectomy / Excision)</h2>
+      <p class="sb-desc">Breast lump removal diagnoses and treats abnormal lumps which may be benign or require further evaluation. Our specialists use precise and minimally invasive techniques to safely remove the lump while preserving surrounding healthy tissue. The procedure ensures accurate diagnosis, minimal scarring, and faster recovery — providing patients with peace of mind and effective care.</p>
+      <div class="sb-features">
+        <div class="sb-feat"><i class="fas fa-check-circle"></i><span>Accurate Diagnosis &amp; Safe Removal</span></div>
+        <div class="sb-feat"><i class="fas fa-check-circle"></i><span>Minimally Invasive &amp; Cosmetic Care</span></div>
+        <div class="sb-feat"><i class="fas fa-check-circle"></i><span>Quick Recovery, Minimal Discomfort</span></div>
+        <div class="sb-feat"><i class="fas fa-check-circle"></i><span>Preservation of Healthy Tissue</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 10 -->
+  <div class="service-block reverse">
+    <div class="sb-image">
+      <img src="images/ser10.png" alt="Varicose Veins Treatment">
+      <span class="sb-num">10</span>
+      <span class="sb-badge">Varicose Veins</span>
+    </div>
+    <div class="sb-content">
+      <p class="sb-category">Vascular Surgery</p>
+      <h2 class="sb-title">Varicose Veins Treatment (Laser / EVLT)</h2>
+      <p class="sb-desc">Varicose veins treatment manages swollen, twisted veins in the legs causing pain and heaviness. We offer advanced Endovenous Laser Treatment (EVLT) to precisely seal affected veins with minimal pain. This modern approach ensures faster recovery, improved circulation, better cosmetic appearance, and a quick return to daily activities.</p>
+      <div class="sb-features">
+        <div class="sb-feat"><i class="fas fa-check-circle"></i><span>Advanced Laser (EVLT) Treatment</span></div>
+        <div class="sb-feat"><i class="fas fa-check-circle"></i><span>Reduced Pain &amp; Faster Recovery</span></div>
+        <div class="sb-feat"><i class="fas fa-check-circle"></i><span>Improved Blood Circulation</span></div>
+        <div class="sb-feat"><i class="fas fa-check-circle"></i><span>Minimal Scarring, Enhanced Cosmetics</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 11 -->
+  <div class="service-block">
+    <div class="sb-image">
+      <img src="images/ser11.png" alt="Diabetic Foot Surgery">
+      <span class="sb-num">11</span>
+      <span class="sb-badge">Diabetic Foot Care</span>
+    </div>
+    <div class="sb-content">
+      <p class="sb-category">Wound &amp; Foot Care</p>
+      <h2 class="sb-title">Diabetic Foot Surgery &amp; Wound Care</h2>
+      <p class="sb-desc">Diabetic foot surgery treats infections, ulcers, and complications from diabetes affecting the feet. Our approach focuses on early intervention, precise surgical care, and advanced wound management to prevent progression and promote healing. We aim to preserve tissue, prevent amputation, and restore mobility with comprehensive treatment plans for improved long-term outcomes.</p>
+      <div class="sb-features">
+        <div class="sb-feat"><i class="fas fa-check-circle"></i><span>Advanced Wound Care &amp; Infection Management</span></div>
+        <div class="sb-feat"><i class="fas fa-check-circle"></i><span>Tissue Preservation &amp; Limb Salvage</span></div>
+        <div class="sb-feat"><i class="fas fa-check-circle"></i><span>Minimally Invasive Where Possible</span></div>
+        <div class="sb-feat"><i class="fas fa-check-circle"></i><span>Comprehensive Care for Faster Healing</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 12 -->
+  <div class="service-block reverse">
+    <div class="sb-image">
+      <img src="images/ser12.png" alt="Abscess Drainage">
+      <span class="sb-num">12</span>
+      <span class="sb-badge">Abscess Treatment</span>
+    </div>
+    <div class="sb-content">
+      <p class="sb-category">Minor Procedure</p>
+      <h2 class="sb-title">Abscess Drainage (Incision &amp; Drainage)</h2>
+      <p class="sb-desc">Abscess drainage is a minor surgical procedure to remove pus collection caused by infection in tissues. Our specialists perform precise incision and drainage techniques to relieve pressure, eliminate infection, and promote faster healing. The procedure is quick, safe, and typically done under local anesthesia — ensuring minimal discomfort and effective recovery.</p>
+      <div class="sb-features">
+        <div class="sb-feat"><i class="fas fa-check-circle"></i><span>Effective Infection &amp; Pus Removal</span></div>
+        <div class="sb-feat"><i class="fas fa-check-circle"></i><span>Immediate Pain Relief</span></div>
+        <div class="sb-feat"><i class="fas fa-check-circle"></i><span>Local Anesthesia — No Hospital Stay</span></div>
+        <div class="sb-feat"><i class="fas fa-check-circle"></i><span>Faster Healing, Minimal Complications</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 13 -->
+  <div class="service-block">
+    <div class="sb-image">
+      <img src="images/ser13.png" alt="Lipoma Cyst Removal">
+      <span class="sb-num">13</span>
+      <span class="sb-badge">Lipoma / Cyst Removal</span>
+    </div>
+    <div class="sb-content">
+      <p class="sb-category">Skin &amp; Soft Tissue Surgery</p>
+      <h2 class="sb-title">Lipoma / Cyst Removal Surgery</h2>
+      <p class="sb-desc">Lipoma and cyst removal eliminates benign lumps or fluid-filled sacs that develop under the skin, which can cause discomfort, cosmetic concerns, or infection. Our specialists use precise and minimally invasive techniques to safely remove the growth while minimizing scarring. The procedure is quick, effective, and ensures faster healing with excellent cosmetic outcomes.</p>
+      <div class="sb-features">
+        <div class="sb-feat"><i class="fas fa-check-circle"></i><span>Safe Removal of Benign Lumps &amp; Cysts</span></div>
+        <div class="sb-feat"><i class="fas fa-check-circle"></i><span>Minimally Invasive, Minimal Scarring</span></div>
+        <div class="sb-feat"><i class="fas fa-check-circle"></i><span>Quick Recovery, Same-Day Discharge</span></div>
+        <div class="sb-feat"><i class="fas fa-check-circle"></i><span>Improved Comfort &amp; Cosmetic Appearance</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 14 -->
+  <div class="service-block reverse">
+    <div class="sb-image">
+      <img src="images/ser14.png" alt="Haemorrhoidectomy">
+      <span class="sb-num">14</span>
+      <span class="sb-badge">Piles Surgery</span>
+    </div>
+    <div class="sb-content">
+      <p class="sb-category">Proctology</p>
+      <h2 class="sb-title">Haemorrhoidectomy (Piles Removal Surgery)</h2>
+      <p class="sb-desc">Haemorrhoidectomy removes severe or persistent piles (hemorrhoids) causing pain, bleeding, and discomfort. Our specialists use advanced techniques for precise removal of affected tissue while minimizing damage to surrounding areas. This procedure provides long-term relief and is recommended when conservative treatments are ineffective — significantly improving quality of life.</p>
+      <div class="sb-features">
+        <div class="sb-feat"><i class="fas fa-check-circle"></i><span>Treatment for Severe or Recurrent Piles</span></div>
+        <div class="sb-feat"><i class="fas fa-check-circle"></i><span>Precise Removal, Long-Term Relief</span></div>
+        <div class="sb-feat"><i class="fas fa-check-circle"></i><span>Reduced Bleeding &amp; Improved Comfort</span></div>
+        <div class="sb-feat"><i class="fas fa-check-circle"></i><span>Modern Surgical Techniques</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 15 -->
+  <div class="service-block">
+    <div class="sb-image">
+      <img src="images/ser15.png" alt="Minor Major Surgical Procedures">
+      <span class="sb-num">15</span>
+      <span class="sb-badge">Surgical Care</span>
+    </div>
+    <div class="sb-content">
+      <p class="sb-category">Comprehensive Surgery</p>
+      <h2 class="sb-title">Minor &amp; Major Surgical Procedures</h2>
+      <p class="sb-desc">We offer a wide range of minor and major surgical procedures tailored to individual patient needs. From simple daycare surgeries to complex operations, our team uses advanced techniques and modern equipment to ensure safe and effective outcomes. With a strong focus on precision, patient comfort, and faster recovery — we deliver comprehensive care under expert supervision.</p>
+      <div class="sb-features">
+        <div class="sb-feat"><i class="fas fa-check-circle"></i><span>Comprehensive Care for All Conditions</span></div>
+        <div class="sb-feat"><i class="fas fa-check-circle"></i><span>Advanced Techniques with High Precision</span></div>
+        <div class="sb-feat"><i class="fas fa-check-circle"></i><span>Daycare &amp; Complex Surgeries Under One Roof</span></div>
+        <div class="sb-feat"><i class="fas fa-check-circle"></i><span>Safety, Comfort &amp; Faster Recovery</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 16 -->
+  <div class="service-block reverse">
+    <div class="sb-image">
+      <img src="images/ser16.png" alt="Thyroid Surgery">
+      <span class="sb-num">16</span>
+      <span class="sb-badge">Thyroid Surgery</span>
+    </div>
+    <div class="sb-content">
+      <p class="sb-category">Endocrine Surgery</p>
+      <h2 class="sb-title">Thyroid Surgery (Thyroidectomy)</h2>
+      <p class="sb-desc">Thyroidectomy treats thyroid disorders such as nodules, goiter, hyperthyroidism, or suspected malignancy. Our specialists use advanced surgical techniques to safely remove part or all of the thyroid gland while preserving surrounding vital structures. The procedure focuses on precision, minimal complications, and optimal recovery — providing effective treatment and improved long-term health outcomes.</p>
+      <div class="sb-features">
+        <div class="sb-feat"><i class="fas fa-check-circle"></i><span>Safe &amp; Precise Thyroid Removal</span></div>
+        <div class="sb-feat"><i class="fas fa-check-circle"></i><span>Minimal Complications</span></div>
+        <div class="sb-feat"><i class="fas fa-check-circle"></i><span>Preservation of Vital Nerves &amp; Structures</span></div>
+        <div class="sb-feat"><i class="fas fa-check-circle"></i><span>Faster Recovery &amp; Improved Outcomes</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 17 -->
+  <div class="service-block">
+    <div class="sb-image">
+      <img src="images/ser17.png" alt="Trauma Accident Surgery">
+      <span class="sb-num">17</span>
+      <span class="sb-badge">Emergency Trauma Care</span>
+    </div>
+    <div class="sb-content">
+      <p class="sb-category">Emergency Surgery</p>
+      <h2 class="sb-title">Trauma &amp; Accident Surgery</h2>
+      <p class="sb-desc">Trauma and accident surgery treats injuries from road accidents, falls, or other emergencies. Our team provides rapid assessment and advanced surgical care to manage fractures, internal injuries, and soft tissue damage. With a focus on timely intervention and precision, we ensure patient stabilization, effective treatment, and improved recovery outcomes through comprehensive emergency management.</p>
+      <div class="sb-features">
+        <div class="sb-feat"><i class="fas fa-check-circle"></i><span>24/7 Emergency Trauma Care</span></div>
+        <div class="sb-feat"><i class="fas fa-check-circle"></i><span>Rapid Diagnosis &amp; Immediate Intervention</span></div>
+        <div class="sb-feat"><i class="fas fa-check-circle"></i><span>Fracture &amp; Internal Injury Management</span></div>
+        <div class="sb-feat"><i class="fas fa-check-circle"></i><span>Comprehensive Care for Faster Recovery</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 18 -->
+  <div class="service-block reverse">
+    <div class="sb-image">
+      <img src="images/ser18.png" alt="Wound Debridement">
+      <span class="sb-num">18</span>
+      <span class="sb-badge">Wound Care</span>
+    </div>
+    <div class="sb-content">
+      <p class="sb-category">Advanced Wound Management</p>
+      <h2 class="sb-title">Wound Debridement &amp; Advanced Care</h2>
+      <p class="sb-desc">Wound debridement removes dead, damaged, or infected tissue from a wound to promote faster and healthier healing — commonly used in chronic wounds, diabetic ulcers, and infected injuries. Our specialists use advanced techniques to carefully clean the wound, reduce infection risk, and stimulate natural healing. This improves recovery outcomes and helps prevent complications effectively.</p>
+      <div class="sb-features">
+        <div class="sb-feat"><i class="fas fa-check-circle"></i><span>Removal of Dead &amp; Infected Tissue</span></div>
+        <div class="sb-feat"><i class="fas fa-check-circle"></i><span>Advanced Wound Care &amp; Infection Control</span></div>
+        <div class="sb-feat"><i class="fas fa-check-circle"></i><span>Promotes Natural Healing &amp; Regeneration</span></div>
+        <div class="sb-feat"><i class="fas fa-check-circle"></i><span>Reduces Complications &amp; Recurrence</span></div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<footer class="footer">
+
+<div class="footer-container">
+
+<!-- 1. LOGO -->
+<div class="footer-col" data-aos="fade-up">
+<img src="images/flogo.png" class="footer-logo">
+<p>Advanced laparoscopic & general surgical care with precision and trust.</p>
+</div>
+
+<!-- 2. QUICK LINKS -->
+<div class="footer-col" data-aos="fade-up" data-aos-delay="100">
+<h4>Quick Links</h4>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="services.html">Services</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+</div>
+
+<!-- 3. ADDRESS -->
+<div class="footer-col" data-aos="fade-up" data-aos-delay="200">
+<h4>Address</h4>
+<p>
+H.No: 6-2-71 & 72,
+Kakaji Colony Road No 1,
+Near KR & MS Reddy Complex,
+Opp Veena Medicare,<br>
+Hanamkonda, Warangal - 506001,<br>
+Telangana
+</p>
+
+<p class="phone">
+<i class="fas fa-phone"></i> +91 99558 99883
+</p>
+</div>
+
+<!-- 4. SOCIAL -->
+<div class="footer-col" data-aos="fade-up" data-aos-delay="300">
+<h4>Follow Us</h4>
+
+<div class="socials">
+<a href="https://www.facebook.com/profile.php?id=61573266621518"><i class="fab fa-facebook-f"></i></a>
+<a href="https://www.instagram.com/dr_agastya_surgeon/"><i class="fab fa-instagram"></i></a>
+<!-- <a href="#"><i class="fab fa-youtube"></i></a> -->
+</div>
+
+</div>
+
+</div>
+
+<!-- BOTTOM -->
+<div class="footer-bottom">
+<p>© 2026 Dr Agastya Hospital. All Rights Reserved.</p>
+</div>
+
+</footer>
+
+
+
+
+
+
+
+
+<!-- Floating Buttons -->
+
+<a href="https://wa.me/919955899883" class="float-whatsapp" target="_blank">
+<i class="fa-brands fa-whatsapp"></i>
+</a>
+
+<a href="tel:+919955899883" class="float-phone">
+<i class="fa-solid fa-phone"></i>
+</a>
+
