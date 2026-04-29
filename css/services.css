@@ -320,6 +320,7 @@ font-size:12px;
   font-size: 30px;
   font-weight: 800;
   margin-bottom: 15px;
+  margin-top: 50px;
 }
 
 /* SUBTEXT */
@@ -402,6 +403,7 @@ font-size:12px;
 
   .about-section p{
     font-size: 15px;
+    text-align: justify;
   }
 
 }
