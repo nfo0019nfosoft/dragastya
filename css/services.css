@@ -426,7 +426,7 @@ font-size:12px;
 /* SERVICE CARD */
 .service-flex{
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 40px;
 
   background: #fff;
@@ -462,20 +462,22 @@ body{
   color: #0282a5;
   font-weight: 800;
   text-align: center;
+ 
   margin-bottom: 20px;
   }
 /* Heading */
 .service-heading {
     color: #0282a5; /* 🔥 your theme color */
-    font-size: 1.6rem;
+    font-size: 1.7rem;
     font-weight: 700;
     margin-bottom: 12px;
+     margin-top: 0;  
 }
 
 /* Description */
 .service-desc {
     color: #555;
-    font-size: 0.95rem;
+    font-size: 16px;
     margin-bottom: 18px;
     line-height: 1.7;
     text-align: justify;
@@ -483,7 +485,7 @@ body{
 
 /* Features */
 .service-feature {
-    font-size: 0.95rem;
+    font-size: 16px;
     margin-bottom: 10px;
 
     display: flex;
@@ -504,6 +506,7 @@ body{
 .service-image-box {
     flex: 1;
     text-align: center;
+     display: block; 
 }
 
 /* Image */
