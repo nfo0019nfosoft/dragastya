@@ -1415,6 +1415,15 @@ font-size:12px;
 
 
 
+
+
+
+
+
+
+
+
+
 /* CARD CONTENT */
 .card-content{
   display: flex;
@@ -1463,6 +1472,191 @@ font-size:12px;
 
 
 
+
+
+
+/* ===============================
+   GLOBAL RESET
+================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #f5f7f9;
+}
+
+/* ===============================
+   SECTION
+================================= */
+.subservice-section {
+    padding: 50px 20px 100px;
+}
+
+/* ===============================
+   HEADER
+================================= */
+.category-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.category-title {
+    font-size: 34px;
+    font-weight: 700;
+    color: #0282a5;
+    margin-bottom: 10px;
+}
+
+.category-sub {
+    font-size: 16px;
+    color: #6b7280;
+}
+
+/* ===============================
+   GRID LAYOUT
+================================= */
+.subservice-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+/* ===============================
+   CARD
+================================= */
+.sub-card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+   
+}
+
+.sub-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 18px 40px rgba(0,0,0,0.15);
+}
+
+
+
+
+
+.su-card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    margin-bottom: 30px;
+   
+}
+
+.su-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 18px 40px rgba(0,0,0,0.15);
+}
+
+/* ===============================
+   IMAGE
+================================= */
+.sub-card-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 15px;
+}
+
+/* ===============================
+   TEXT
+================================= */
+.sub-card-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #0282a5;
+    margin-bottom: 10px;
+}
+
+.sub-card-text {
+    font-size: 14px;
+    color: #6b7280;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+/* ===============================
+   BUTTON
+================================= */
+.sub-card-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #ff4d4d;
+    color: #ffffff;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.sub-card-btn:hover {
+    background: #0282a5;
+}
+
+/* ===============================
+   TABLET RESPONSIVE
+================================= */
+@media (max-width: 992px) {
+
+    .subservice-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .category-title {
+        font-size: 28px;
+    }
+}
+
+/* ===============================
+   MOBILE RESPONSIVE
+================================= */
+@media (max-width: 600px) {
+
+    .subservice-section {
+        padding: 40px 15px;
+    }
+
+    .subservice-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .sub-card {
+        padding: 15px;
+    }
+
+    .su-card {
+        padding: 15px;
+    }
+
+    .sub-card-img {
+        height: 160px;
+    }
+
+    .category-title {
+        font-size: 24px;
+    }
+
+    .category-sub {
+        font-size: 14px;
+    }
+}
 
 
 
