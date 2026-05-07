@@ -2499,7 +2499,7 @@ h1 {
 .dark-blue { background-color: var(--brand-dark); }
 .red-pink { background-color: var(--brand-red); }
 
-.details h3 { font-size: 16px; margin: 0; color: #333; }
+.details h3 { font-size: 16px; margin: 0; color: #333; margin-bottom: 5px;}
 .details p { font-size: 13px; margin: 0; color: #777; }
 
 /* Image Side */
@@ -2533,18 +2533,100 @@ h1 {
 .stat p { font-size: 12px; color: #bbb; }
 
 /* --- Mobile CSS --- */
+/* --- MOBILE CSS --- */
 @media (max-width: 991px) {
-    .content-box { flex-direction: column; padding: 40px 20px; text-align: center; }
-    .intro-text { border-left: none; padding-left: 0; }
-    .timeline::before { left: 50%; transform: translateX(-50%); } /* Line center for mobile */
-    .timeline-item { flex-direction: column; text-align: center; gap: 10px; }
-    .circle-image { width: 300px; height: 300px; }
-    .stats-bar { 
-        flex-direction: column; 
-        gap: 30px; 
-        width: 100%; 
-        margin-top: 20px; 
+
+    .content-box{
+        flex-direction: column;
+        padding: 40px 20px;
+        text-align: center;
     }
+
+    .text-side{
+        width:100%;
+    }
+
+    .intro-text{
+        border-left: none;
+        padding-left: 0;
+        text-align:justify;
+    }
+
+    /* TIMELINE */
+    .timeline{
+        margin-top:30px;
+        width:100%;
+        padding-left:0;
+    }
+
+    /* CENTER LINE REMOVE */
+    .timeline::before{
+        left:20px;
+        top:0;
+        bottom:0;
+        transform:none;
+    }
+
+    /* ITEM */
+    .timeline-item{
+        flex-direction: row;
+        align-items: flex-start;
+        text-align:left;
+        gap:15px;
+        padding-left:0;
+        margin-bottom:25px;
+    }
+
+    /* ICON */
+    .icon{
+        width:40px;
+        height:40px;
+        min-width:40px;
+        font-size:15px;
+        border-radius:8px;
+        z-index:2;
+    }
+
+    /* DETAILS */
+    .details{
+        flex:1;
+    }
+
+    .details h3{
+        font-size:15px;
+        margin-bottom:5px;
+    }
+
+    .details p{
+        font-size:12px;
+        line-height:1.5;
+    }
+
+    /* IMAGE */
+    .image-side{
+        width:100%;
+        margin-top:20px;
+    }
+
+    .circle-image{
+        width:280px;
+        height:280px;
+        border-width:10px;
+    }
+
+    /* STATS BAR */
+    .stats-bar{
+        flex-direction:column;
+        gap:25px;
+        width:100%;
+        margin-top:25px;
+        padding:25px 20px;
+    }
+
+    .stat h2{
+        font-size:28px;
+    }
+
 }
 
 
