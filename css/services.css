@@ -319,6 +319,7 @@ font-size:12px;
 .page-header h1{
   font-size: 30px;
   font-weight: 800;
+  text-transform: uppercase;
   margin-bottom: 15px;
   margin-top: 50px;
 }
@@ -569,6 +570,7 @@ body{
 
 
 
+
 .footer {
   background: #0282a5;
   color: #fff;
@@ -601,8 +603,9 @@ body{
 
 /* TEXT */
 .footer-col p {
-  font-size: 16px;
+  font-size: 15px;
   line-height: 1.6;
+  text-align: justify;
   opacity: 0.9;
 }
 

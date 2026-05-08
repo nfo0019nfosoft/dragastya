@@ -295,6 +295,139 @@ font-size:12px;
 
 
 
+/* ABOUT HERO SECTION */
+
+.about-hero{
+    position: relative;
+    width: 100%;
+    height: 85vh;
+    overflow: hidden;
+    background: #000;
+}
+
+/* IMAGE */
+
+.about-hero img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+   object-position: center bottom;
+}
+
+/* OVERLAY */
+
+.about-hero-overlay{
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to right,
+        rgba(0,0,0,0.75),
+        rgba(0,0,0,0.75)
+    );
+    z-index: 1;
+}
+
+/* CONTENT */
+
+.about-hero-content{
+    position: absolute;
+    top: 50%;
+    left: 8%;
+    transform: translateY(-50%);
+    z-index: 2;
+    max-width: 650px;
+    color: white;
+}
+
+.about-hero-content span{
+    display: inline-block;
+    color: #ff4d4f;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+}
+
+.about-hero-content h1{
+    font-size: 50px;
+    font-weight: 900;
+    line-height: 1.1;
+    margin-bottom: 18px;
+    text-transform: uppercase;
+}
+
+.about-hero-content p{
+    font-size: 18px;
+    line-height: 1.8;
+    color: rgba(255,255,255,0.9);
+    margin-bottom: 30px;
+    max-width: 600px;
+}
+
+/* BUTTON */
+
+.about-hero-btn{
+    display: inline-block;
+    padding: 15px 34px;
+    background: #ff4d4f;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 15px;
+    transition: 0.3s ease;
+}
+
+.about-hero-btn:hover{
+    background: #0282a5;
+    transform: translateY(-3px);
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.about-hero{
+    height: 60vh;
+}
+
+.about-hero-overlay{
+    background: linear-gradient(
+        to top,
+        rgba(0,0,0,0.82),
+        rgba(0,0,0,0.35)
+    );
+}
+
+.about-hero-content{
+    left: 6%;
+    width: 88%;
+}
+
+.about-hero-content span{
+    font-size: 12px;
+    margin-bottom: 12px;
+}
+
+.about-hero-content h1{
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.about-hero-content p{
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+.about-hero-btn{
+    padding: 13px 28px;
+    font-size: 14px;
+}
+
+}
+
 
 
 
@@ -902,8 +1035,9 @@ font-size:12px;
 
 /* TEXT */
 .footer-col p {
-  font-size: 16px;
+  font-size: 15px;
   line-height: 1.6;
+  text-align: justify;
   opacity: 0.9;
 }
 

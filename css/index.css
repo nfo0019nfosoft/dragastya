@@ -301,7 +301,6 @@ font-size:12px;
 
 :root {
   --primary: #ff4d4f;
-
 }
 
 /* HERO */
@@ -339,18 +338,22 @@ font-size:12px;
   transition: transform 8s ease;
 }
 
-/* ZOOM */
+/* ZOOM EFFECT */
 .hero-slide.active img {
   transform: scale(1.1);
 }
 
-/* LEFT DARK OVERLAY */
+/* DARK OVERLAY */
 .hero-slide::before {
   content: "";
   position: absolute;
   width: 45%;
   height: 100%;
-  background: linear-gradient(to right, rgba(0,0,0,0.7), transparent);
+  background: linear-gradient(
+    to right,
+    rgba(0,0,0,0.75),
+    transparent
+  );
   z-index: 1;
 }
 
@@ -362,47 +365,50 @@ font-size:12px;
   transform: translateY(-50%);
   color: white;
   z-index: 2;
-  max-width: 500px;
+  max-width: 650px;
 }
 
 .hero-content h1 {
-  font-size: clamp(24px, 3vw, 40px);
-  font-weight: 800;
-  margin-bottom: 10px;
+  font-size: 45px;
+  font-weight: 900;
+  margin-bottom: 20px;
   text-transform: uppercase;
+  line-height: 1.2;
   opacity: 0;
   transform: translateX(-40px);
   transition: 0.6s ease;
 }
 
 .hero-content p {
-  font-size: 14px;
-  letter-spacing: 2px;
-  margin-bottom: 20px;
+  font-size: 18px;
+  letter-spacing: 1px;
+  line-height: 1.8;
+  margin-bottom: 30px;
   opacity: 0;
   transform: translateX(-40px);
   transition: 0.6s ease 0.2s;
 }
 
 .hero-btn {
-  padding: 10px 22px;
+  display: inline-block;
+  padding: 15px 32px;
   background: var(--primary);
   color: white;
   text-decoration: none;
   font-weight: 700;
-  font-size: 13px;
-  border-radius: 4px;
+  font-size: 16px;
+  border-radius: 6px;
   opacity: 0;
   transform: translateX(-40px);
   transition: 0.6s ease 0.4s;
 }
 
 .hero-btn:hover {
-  background:#0282a5;
+  background: #0282a5;
   color: white;
 }
 
-/* ACTIVE ANIMATION */
+/* ACTIVE TEXT ANIMATION */
 .hero-slide.active h1,
 .hero-slide.active p,
 .hero-slide.active .hero-btn {
@@ -410,7 +416,7 @@ font-size:12px;
   transform: translateX(0);
 }
 
-/* MOBILE PERFECT FIX 🔥 */
+/* MOBILE RESPONSIVE */
 @media (max-width:768px){
 
 .hero {
@@ -423,26 +429,43 @@ font-size:12px;
 
 .hero-slide img {
   height: 100vh;
-  object-fit: cover; /* IMPORTANT */
+  object-fit: cover;
+}
+
+/* MOBILE OVERLAY */
+.hero-slide::before {
+  width: 100%;
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,0.8),
+    rgba(0,0,0,0.2)
+  );
 }
 
 .hero-content {
   top: 60%;
   left: 6%;
-  width: 85%;
+  width: 88%;
 }
 
 .hero-content h1 {
-  font-size: 22px;
+  font-size: 35px;
+  margin-bottom: 15px;
+  line-height: 1.3;
 }
 
 .hero-content p {
-  font-size: 12px;
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 25px;
+}
+
+.hero-btn {
+  font-size: 15px;
+  padding: 14px 28px;
 }
 
 }
-
-
 
 
 
@@ -949,7 +972,7 @@ font-size:12px;
 .image-inner {
   border-radius: 30px;
   overflow: hidden;
-  box-shadow: 10px 10px 10px var(--h-blue); /* Offset Background Effect */
+  box-shadow: 5px 5px 5px var(--h-blue); /* Offset Background Effect */
 }
 
 .main-doc-img {
@@ -1077,11 +1100,14 @@ font-size:12px;
 .arrow-content h2 {
   font-size: 28px;
   font-weight: 800;
+  text-transform: uppercase;
   margin-bottom: 5px;
 }
 
 .arrow-content p {
-  font-size: 14px;
+  font-size: 16px;
+  color: white;
+  font-weight: 600;
   opacity: 0.8;
 }
 
@@ -2178,7 +2204,7 @@ text-transform: uppercase;
         padding: 40px 30px;
         border-radius: 24px;
         text-align: center;
-        border: 1px solid rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(255, 255, 255, 0.28);
         transition: all 0.4s ease;
     }
 
@@ -2218,7 +2244,7 @@ text-transform: uppercase;
 
     .feature-card p {
         font-size: 0.95rem;
-        color: #b3b3b3;
+        color: white;
         line-height: 1.6;
     }
 
@@ -2721,10 +2747,11 @@ text-transform: uppercase;
 }
 
 .glass-card p {
-    font-size: 0.9rem;
+    font-size: 15px;
     text-transform: uppercase;
-    letter-spacing: 2px;
-    font-weight: 500;
+   
+     color:white;
+    font-weight: 900;
     opacity: 0.8;
 }
 
@@ -3342,8 +3369,9 @@ text-transform: uppercase;
 
 /* TEXT */
 .footer-col p {
-  font-size: 16px;
+  font-size: 15px;
   line-height: 1.6;
+  text-align: justify;
   opacity: 0.9;
 }
 
